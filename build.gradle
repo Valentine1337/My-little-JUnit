@@ -8,12 +8,14 @@ repositories {
 
 def selenideVersion = "6.3.4",
     junitVersion = "5.8.2",
-    slf4jVersion = "1.7.36"
+    slf4jVersion = "1.7.36",
+    classgraph = "4.8.52"
 
 dependencies {
     testImplementation(
             "com.codeborne:selenide:$selenideVersion",
-            "org.junit.jupiter:junit-jupiter:$junitVersion")
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "io.github.classgraph:classgraph:$classgraph")
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
